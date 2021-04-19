@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #282828;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#left_col {
+    float: left;
+    width: 300px;
+    height: calc(100vh - 100px);
+    padding-top: 75px;
+    background-color: #000000;
+}
+
+#right_col {
+    float: left;
+    width: calc(100% - 300px);
+    height: calc(100vh - 100px);
+    padding-top: 75px;
+    overflow: auto;
+    background-color: #141922;
+}
