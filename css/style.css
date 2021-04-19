@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
 footer {
     position: fixed;
     height: 100px;
@@ -21,7 +26,7 @@ footer {
 
 #left_col {
     float: left;
-    width: 300px;
+    width: 200px;
     height: calc(100vh - 100px);
     padding-top: 75px;
     background-color: #000000;
@@ -29,9 +34,69 @@ footer {
 
 #right_col {
     float: left;
-    width: calc(100% - 300px);
+    width: calc(100% - 200px);
     height: calc(100vh - 100px);
     padding-top: 75px;
     overflow: auto;
     background-color: #141922;
+}
+
+.menu_inline {
+    height: 100px;
+    background-color: blue;
+}
+
+
+#played {
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 2000px; */
+    background-color: aqua;
+}
+
+.album img {
+    width: 120px;
+    /* height: 150px; */
+    margin: 10px;
+    background-color: orange;
+}
+
+#for_you {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: orchid;
+}
+
+#popular {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: pink;
+}
+/* media query */
+
+/* XS */
+@media screen and (max-width: 487px) {
+
+    #left_col {
+        width: 40px;
+    }
+
+    #right_col {
+        width: calc(100% - 40px);
+    }
+    
+    .album img {
+        width: 140px;
+    }
+}
+
+/* S */
+@media screen and (max-width: 991px) {
+    
+}
+
+/* MD */
+
+@media screen and (max-width: 1199) {
+
 }
