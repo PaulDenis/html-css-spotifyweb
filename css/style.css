@@ -88,6 +88,7 @@ body {
     float: left;
     width: 200px;
     height: calc(100vh - 100px);
+    overflow-y: auto;
     background-color: #000000;
 }
 
@@ -113,13 +114,45 @@ body {
     font-size: 14px;
 }
 
+#playlist {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+#playlist h5 {
+    text-transform: uppercase;
+    color: white;
+}
+#playlist i {
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: #a3a3a3;
+    color: #000000;
+}
+ #playlist a {
+     text-decoration: none;
+     color: #5f5f5f;
+     font-weight: 600;
+     font-size: 12px;
+ }
+ #playlist a:hover {
+     color: white;
+ }
+
+ #playlist li {
+     display: flex;
+     flex-direction: column;
+     margin: 15px 0;
+ }
+
 
 #right_col {
     float: left;
     width: calc(100% - 200px);
     height: calc(100vh - 100px);
     padding-top: 65px;
-    overflow: auto;
+    overflow-y: auto;
     background-color: #141922;
 }
 
