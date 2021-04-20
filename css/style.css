@@ -33,6 +33,24 @@ body {
     z-index: 8;
 }
 
+.btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+}
+.btn:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
 .navigation_menu {
     text-align: center;
 }
