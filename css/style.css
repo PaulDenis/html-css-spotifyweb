@@ -17,11 +17,20 @@ body {
 }
 
 /* main */
-.navigation_menu {
-    height: 50px;
-    text-align: center;
-
+.upgrade {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 200px);
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 8;
 }
+
+.navigation_menu {
+    text-align: center;
+}
+
 .menu_inline {
     display: inline-block;
     list-style: none;
@@ -37,6 +46,10 @@ body {
     text-decoration: none;
     color: #696c71;
 }
+.menu_inline a:hover {
+    color: white;
+}
+
 .color_green {
     height: 1px;
     width: 25px;
@@ -48,7 +61,6 @@ body {
     float: left;
     width: 200px;
     height: calc(100vh - 100px);
-    padding-top: 75px;
     background-color: #000000;
 }
 
@@ -56,7 +68,7 @@ body {
     float: left;
     width: calc(100% - 200px);
     height: calc(100vh - 100px);
-    padding-top: 75px;
+    padding-top: 80px;
     overflow: auto;
     background-color: #141922;
 }
@@ -65,17 +77,34 @@ body {
 #played {
     display: flex;
     flex-wrap: wrap;
-    /* height: 2000px; */
-    background-color: aqua;
+    margin-bottom: 25px;
+}
+
+.section_title {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.album {
+    text-align: center;
 }
 
 .album img {
     width: 130px;
-    /* height: 150px; */
     margin: 10px;
+    margin-left: 10px;
     background-color: orange;
 }
-
+.album h4 {
+    width: 150px;
+    font-size: 12px;
+    color: white;
+}
+.album h5 {
+    font-size: 8px;
+    color: #787b7f;
+}
 #for_you {
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +151,11 @@ footer {
 }
 
 /* MD */
-@media screen and (max-width: 1024px) {
-    
+@media screen and (max-width: 1023px) {
+    .album img {
+        width: 110px;
+    }
+    .album h4 {
+        width: 130px;
+    }
 }
