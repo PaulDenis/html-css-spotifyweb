@@ -17,12 +17,18 @@ body {
 }
 
 /* main */
+.logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 110px;
+}
+
 .upgrade {
     position: fixed;
     top: 0;
     right: 0;
     width: calc(100% - 200px);
-    height: 80px;
+    height: 65px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 8;
 }
@@ -69,7 +75,7 @@ body {
     float: left;
     width: calc(100% - 200px);
     height: calc(100vh - 100px);
-    padding-top: 80px;
+    padding-top: 65px;
     overflow: auto;
     background-color: #141922;
 }
