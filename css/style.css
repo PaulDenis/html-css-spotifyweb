@@ -34,6 +34,7 @@ body {
 .menu_inline {
     display: inline-block;
     list-style: none;
+    margin-bottom: 25px;
 }
 .menu_inline li {
     display: inline-block;
@@ -108,13 +109,19 @@ body {
 #for_you {
     display: flex;
     flex-wrap: wrap;
-    background-color: orchid;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #787b7f;
 }
 
 #popular {
     display: flex;
     flex-wrap: wrap;
-    background-color: pink;
+    margin-bottom: 25px;
 }
 
 #popular img {
@@ -147,6 +154,10 @@ footer {
     
     .album img {
         width: 140px;
+    }
+
+    .upgrade {
+        width: calc(100% - 40px);
     }
 }
 
