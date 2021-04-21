@@ -40,6 +40,9 @@ body {
     margin-left: 10px;
     width: 110px;
 }
+.small_logo {
+    display: none;
+}
 
 .upgrade {
     position: fixed;
@@ -83,6 +86,7 @@ body {
 }
 
 #left_col {
+    position: relative;
     display: flex;
     flex-direction: column;
     float: left;
@@ -97,6 +101,9 @@ body {
     display: flex;
     text-decoration: none;
     color: #696969;
+}
+#vertical_menu a:hover {
+    color: white;
 }
 #vertical_menu a:first-child {
     margin-top: 20px;
@@ -135,16 +142,71 @@ body {
      color: #5f5f5f;
      font-weight: 600;
      font-size: 12px;
- }
- #playlist a:hover {
+}
+#playlist a:hover {
      color: white;
- }
+}
 
- #playlist li {
-     display: flex;
-     flex-direction: column;
-     margin: 15px 0;
- }
+#playlist li {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+#account {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    color: white;
+    background-color: black;
+}
+
+.download {
+    font-size: 10px;
+    color: #616161;
+}
+
+#account a {
+    text-decoration: none;
+}
+#account a:hover span{
+    color: white;
+}
+
+#account span {
+    position: relative;
+    top: -2px
+}
+
+#account a img {
+    width: 12px;
+}
+hr {
+    margin: 5px 0;
+    color: #616161;
+}
+
+.account_details {
+    margin-top: 5px;
+}
+
+.account_details img {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #808080;
+}
+
+.account_details h5 {
+    display: inline-block;
+    position: relative;
+    bottom: 3px;
+    padding-left: 5px;
+}
 
 
 #right_col {
@@ -226,6 +288,15 @@ footer {
 /* XS */
 @media screen and (max-width: 487px) {
 
+    .small_logo {
+        height: 20px;
+        margin-top: 5px;
+        display: inline-block;
+    }
+    .logo {
+        display: none;
+    }
+
     #left_col {
         width: 40px;
     }
@@ -240,6 +311,35 @@ footer {
 
     .upgrade {
         width: calc(100% - 40px);
+    }
+    #vertical_menu a {
+        padding-left: 10px;
+    }
+    #vertical_menu a:first-child {
+        border: none;
+        padding-left: 10px;
+        margin-top: 5px;
+    }
+    #vertical_menu span {
+        display: none;
+    }
+
+    #playlist {
+        display: none;
+    }
+    
+    #account {
+        padding-left: 10px;
+    }
+
+    .account_details h5 {
+        display: none;
+    }
+    hr {
+        display: none;
+    }
+    .download {
+        display: none;
     }
 }
 
