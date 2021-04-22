@@ -232,13 +232,13 @@ hr {
 }
 
 .album {
+    position: relative;
     text-align: center;
 }
 
 .album img {
     width: 130px;
     margin: 10px;
-    margin-left: 10px;
     background-color: orange;
 }
 .album h4 {
@@ -250,6 +250,28 @@ hr {
     font-size: 8px;
     color: #787b7f;
 }
+
+.layover {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 130px;
+    width: 130px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.layover i {
+    font-size: 50px;
+    line-height: 130px;
+    text-align: center;
+    color: white;
+}
+
+.album_picture:hover .layover {
+    cursor: pointer;
+    display: inline-block;
+}
+
 #for_you {
     display: flex;
     flex-wrap: wrap;
@@ -269,6 +291,9 @@ hr {
 }
 
 #popular img {
+    border-radius: 50%;
+}
+#popular .layover {
     border-radius: 50%;
 }
 
@@ -344,8 +369,10 @@ footer {
     margin: 0 15px;
     font-size: 20px;
 }
-#footer_center i:hover {
+#footer_center i:hover,
+#footer_right i:hover {
     cursor: pointer;
+    scale: 1.2;
 }
 
 .timeline {
@@ -384,9 +411,6 @@ footer {
     margin: 0 5px;
     font-size: 10px;
 }
-#footer_right i:hover {
-    cursor: pointer;
-}
 
 #sound_bar {
     position: relative;
@@ -420,16 +444,30 @@ footer {
     cursor: pointer;
     background-color: #adff2f;
 }
-
+#current_sound:hover,
+#current_time:hover {
+    cursor: pointer;
+    background-color: #adff2f;
+}
 .circle {
     display: none;
     position: absolute;
     top: -3px;
-    left: 15%;
+    left: 100%;
+    transform: translateX(-50%);
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: whitesmoke;
+}
+
+#max_sound:hover + #current_sound .circle,
+#total_time:hover + #current_time .circle {
+    display: inline-block;
+}
+#current_sound:hover .circle,
+#current_time:hover .circle{
+    display: inline-block;
 }
 /* media query */
 
@@ -451,10 +489,6 @@ footer {
 
     #right_col {
         width: calc(100% - 40px);
-    }
-
-    .album img {
-        width: 140px;
     }
 
     .upgrade {
@@ -492,7 +526,7 @@ footer {
 
     #footer_left img {
         width: 20px;
-        margin: 0 10px;
+        margin: 0 5px;
     }
     .title {
         margin-right: 2px;
@@ -506,5 +540,13 @@ footer {
     }
     .album h4 {
         width: 130px;
+    }
+    .layover {
+        width: 110px;
+        height: 110px;
+    }
+
+    .layover i {
+        line-height: 110px;
     }
 }
